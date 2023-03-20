@@ -33,6 +33,7 @@ public class App {
                 .entrySet().stream()
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
+
                         entry -> entry.getValue().orElseThrow(IllegalStateException::new)
                 ));
 
